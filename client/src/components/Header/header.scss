@@ -1,0 +1,52 @@
+.header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: var(--font);
+  backdrop-filter: blur(30px);
+  background: black;
+
+  .logo {
+    width: 100%;
+
+    img {
+      width: 140px;
+    }
+  }
+  .links {
+    a {
+      margin: 0 1rem;
+      color: var(--font);
+      letter-spacing: 0.1rem;
+      position: relative;
+      margin-right: 1.8rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    a::before {
+      content: " ";
+      width: 0%;
+      height: 2px;
+      background: var(--font);
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 0.4s;
+    }
+
+    a:hover {
+      color: var(--main-color);
+    }
+    a:hover::before {
+      width: 100%;
+    }
+  }
+}
